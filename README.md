@@ -17,10 +17,8 @@ This repository concentrates the codes developed during the study sessions of th
 Repository structure:
 
 - notebooks
-  - exploratory_data_analysis
-    - exploratory_data_analysis.ipynb
-    - README.md
-  - experimentation
+  - exercises_chapter_two.ipynb
+  - README.md
 - src
   - visualization
     - visualization_utils.py
