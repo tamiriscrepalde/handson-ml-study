@@ -10,11 +10,15 @@ from .cfg.config import DOWNLOAD_ROOT, HOUSING_PATH, HOUSING_URL
 def fetch_housing_data(
     housing_url: str = HOUSING_URL, housing_path: str = HOUSING_PATH
 ) -> None:
-    """_summary_
+    """Retrieve housing data from URL.
+
+    This function is from Aurélien Geron (@ageron), in the Github repository handson-ml2
+    (https://github.com/ageron/handson-ml2/blob/master/02_end_to_end_machine_learning_project.ipynb).
 
     Args:
-        housing_url (str, optional): _description_. Defaults to HOUSING_URL.
-        housing_path (str, optional): _description_. Defaults to HOUSING_PATH.
+        housing_url (str, optional): The URL from where to retrieve the data.
+            Defaults to HOUSING_URL.
+        housing_path (str, optional): The path of the data. Defaults to HOUSING_PATH.
     """
     if not os.path.isdir(housing_path):
         os.makedirs(housing_path)
@@ -26,7 +30,11 @@ def fetch_housing_data(
 
 
 def fetch_california_map() -> None:
-    """_summary_"""
+    """Retrieve California map.
+
+    This function is from Aurélien Geron (@ageron), in the Github repository handson-ml2
+    (https://github.com/ageron/handson-ml2/blob/master/02_end_to_end_machine_learning_project.ipynb).
+    """
     images_path = os.path.join(os.getcwd(), "images", "end_to_end_project")
     os.makedirs(images_path, exist_ok=True)
     url = f"{DOWNLOAD_ROOT}/images/end_to_end_project/california.png"
